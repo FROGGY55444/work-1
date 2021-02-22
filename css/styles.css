@@ -510,7 +510,7 @@ body {
 }
 
 .blog__name {
-  color: #555555;
+  color: #555;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -520,7 +520,7 @@ body {
 }
 
 .blog__footing, .blog__author, .blog__spec {
-  color: #777777;
+  color: #777;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
   font-weight: 400;
@@ -530,7 +530,7 @@ body {
 }
 
 .blog__text {
-  color: #555555;
+  color: #555;
   font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 400;
@@ -541,7 +541,7 @@ body {
 .blog__btn {
 	max-width: 90px;
   display: inline-block;
-  color: #777777;
+  color: #777;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
   line-height: 1.8;
@@ -575,7 +575,7 @@ body {
   max-width: 760px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 75px;
+  margin-top: 75px;
 }
 
 .clients__logos {
@@ -584,7 +584,7 @@ body {
 }
 
 .clients__text {
-  color: #555555;
+  color: #555;
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   font-weight: 400;
@@ -593,7 +593,7 @@ body {
 }
 
 .clients__person {
-  color: #555555;
+  color: #555;
   font-family: 'Roboto Slab', serif;
   font-size: 20px;
   font-weight: 400;
@@ -700,13 +700,19 @@ body {
 	opacity: 0;
 }
 
+.form__down {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 .contact__btn {
-	color: #555555;
+	color: #555;
 	font-family: 'Roboto Slab', serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.67;
-	border: 1px solid #555555;
+	border: 1px solid #555;
 	display: inline-block;
   text-transform: uppercase;
   padding: 16px 35px;
@@ -719,7 +725,7 @@ body {
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.67;
-	margin-right: 200px;
+	margin-left: 10px;
 }
 
 .contact__star {
@@ -765,7 +771,7 @@ body {
 	margin-top: 30px;
 }
 
-@media (max-width: 449px) {
+@media (max-width: 750px) {
 	.nav {
 		display: none;
 	}
@@ -807,7 +813,7 @@ body {
 
 	.title {
 		position: relative;
-		color: #555555;
+		color: #555;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 18px;
 		font-weight: 400;
@@ -817,7 +823,7 @@ body {
 	}
 
 	.subtitle {
-		color: #555555;
+		color: #555;
 	  font-family: 'Roboto Slab', serif;
 	  font-size: 12px;
 	  font-weight: 400;
@@ -841,6 +847,10 @@ body {
 		margin: 0;
 	}
 
+	.services__icon {
+		width: 60px;
+	}
+
 /* About */
 	.about__info {
 		flex-direction: column;
@@ -849,10 +859,15 @@ body {
 
 	.about__text {
 		margin: 15px 0 0 0;
+		font-size: 10px;
 	}
 
 	.about__text:first-child {
 		margin: 0;
+	}
+
+	.about__workers {
+		margin-top: 30px;
 	}
 
 	.about__item {
@@ -904,6 +919,32 @@ body {
 		margin-left: 0;
 	}
 
+	.blog__calendar {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+	}
+
+	.blog__data span {
+		font-size: 20px;
+	}
+
+	.blog__name {
+		font-size: 14px;
+	}
+
+	.blog__footing, .blog__author, .blog__spec {
+    font-size: 12px;
+	}
+
+	.blog__text {
+		font-size: 10px;
+	}
+
+	.blog__btn {
+    font-size: 12px;
+	}
+
 /* Clients */
 	.clients__logos {
 		flex-direction: column;
@@ -911,12 +952,81 @@ body {
 		align-items: center;
 	}
 
+	.clients__item {
+		margin-bottom: 15px;
+	}
+
+	.clients__item:last-child {
+		margin-bottom: 0;
+	}
+
+	.clients__container {
+    margin-top: 50px;
+	}
+
+	.clients__text {
+		font-size: 14px;
+	}
+
+	.clients__person {
+    font-size: 16px;
+    margin-top: 10px;
+	}
+
 /* Contacts */
 	.contact__content {
 		flex-direction: column;
 	}
 
+	.contact__contacts {
+    width: 100%;
+    display: flex;
+		flex-direction: row;
+    justify-content: space-between;
+	}
+
+	.contact__item {
+		width: 33.33333%;
+	}
+
+	.contact__title {
+    font-size: 12px;
+		line-height: 1.2;
+		margin-left: 5px;
+	}
+
+	.contact__down {
+    margin-left: 10px;
+	}
+
+	.contact__text {
+    font-size: 10px;
+		margin-top: 5px;
+	}
+
+	.contact__info {
+    font-size: 10px;
+		margin-right: 50px;
+		margin-left: 10px;
+	}
+
 	.form {
 		width: 100%;
+	}
+
+	.form__input[placeholder], .form__message[placeholder] {
+		font-size: 10px;
+	}
+
+	.contact__btn {
+		width: 200px;
+		padding: 16px 20px;
+    font-size: 10px;
+	}
+
+	.form__down {
+		display: flex;
+		align-items: center;
+		max-height: 54px;
 	}
 }

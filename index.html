@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Startup</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
 
@@ -28,15 +28,6 @@
             <div class="burger"></div>
             <div class="burger"></div>
           </button>
-          <!-- <div class="modalMenu">
-            <a href="#" class="modalMenu__link">Home</a>
-            <a href="#" class="modalMenu__link">Services</a>
-            <a href="#" class="modalMenu__link">About</a>
-            <a href="#" class="modalMenu__link">Works</a>
-            <a href="#" class="modalMenu__link">Blog</a>
-            <a href="#" class="modalMenu__link">Clients</a>
-            <a href="#" class="modalMenu__link">Contact</a>
-          </div> -->
         </div>
       </div>
     </header>
@@ -60,21 +51,21 @@
           <p class="subtitle">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
           <div class="services__content">
             <div class="services__item">
-              <div class="services__icon"><img src="img/services/fa-font.jpg"></div>
+              <div><img src="img/services/fa-font.jpg" class="services__icon"></div>
               <p class="main">Clean Typography</p>
               <p class="text">Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit. Minima maxime quam architecto quo inventore
                 harum ex magni, dicta impedit. Lorem ipsum.</p>
             </div>
             <div class="services__item">
-              <div class="services__icon"><img src="img/services/fa-code.jpg"></div>
+              <div><img src="img/services/fa-code.jpg" class="services__icon"></div>
               <p class="main">Rock Solid Code</p>
               <p class="text">Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit. Minima maxime quam architecto quo inventore
                 harum ex magni, dicta impedit. Lorem ipsum.</p>
             </div>
             <div class="services__item">
-              <div class="services__icon"><img src="img/services/fa-support.jpg"></div>
+              <div><img src="img/services/fa-support.jpg" class="services__icon"></div>
               <p class="main">Expert Support</p>
               <p class="text">Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit. Minima maxime quam architecto quo inventore
@@ -259,7 +250,7 @@
           <p class="subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
           <div class="blog__container">
             <div class="blog__photo">
-              <img src="img/blog/blog1.jpg" alt="">
+              <img src="img/blog/blog1.jpg">
             </div>
             <div class="blog__content">
               <div class="blog__main">
@@ -292,7 +283,7 @@
           </div>
           <div class="blog__container">
             <div class="blog__photo">
-              <img src="img/blog/blog2.jpg" alt="">
+              <img src="img/blog/blog2.jpg">
             </div>
             <div class="blog__content">
               <div class="blog__main">
@@ -331,19 +322,19 @@
         <div class="clients__inner">
           <div class="clients__logos">
             <div class="clients__item">
-              <img src="img/clients/Layer 30.png" alt="">
+              <img src="img/clients/Layer 30.png">
             </div>
             <div class="clients__item">
-              <img src="img/clients/Layer 31.png" alt="">
+              <img src="img/clients/Layer 31.png">
             </div>
             <div class="clients__item">
-              <img src="img/clients/Layer 33.png" alt="">
+              <img src="img/clients/Layer 33.png">
             </div>
             <div class="clients__item">
-              <img src="img/clients/Layer 32.png" alt="">
+              <img src="img/clients/Layer 32.png">
             </div>
             <div class="clients__item">
-              <img src="img/clients/Layer 34.png" alt="">
+              <img src="img/clients/Layer 34.png">
             </div>
           </div>
           <div class="clients__container">
@@ -369,10 +360,10 @@
                   <img src="img/contact/fa-map-marker.png" class="contact__img"><h3 class="contact__title">Address</h3>
                 </div>
                 <div class="contact__down">
-                  <div class="contact__text">
+                  <p class="contact__text">
                     312, 7th Ave, New York<br>
                     NY 101200, United States of America
-                  </div>
+                  </p>
                 </div>
               </div>
               <div class="contact__item">
@@ -380,10 +371,11 @@
                   <img src="img/contact/fa-mobile-phone.png" class="contact__img"><h3 class="contact__title">Hotline (24x7)</h3>
                 </div>
                 <div class="contact__down">
-                  <div class="contact__text">
-                    +65 0052 300, +65 88251 210<br>
+                  <p class="contact__text">
+                    +65 0052 300,<br>
+                    +65 88251 210<br>
                     +88 01723 511 340
-                  </div>
+                  </p>
                 </div>
               </div>
               <div class="contact__item">
@@ -391,10 +383,10 @@
                   <img src="img/contact/fa-envelope-o.png" class="contact__img contact__img_mail"><h3 class="contact__title">E-mail</h3>
                 </div>
                 <div class="contact__down">
-                  <div class="contact__text">
+                  <p class="contact__text">
                     shapedtheme@gmail.com<br>
                     khalilkode@gmail.com
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -404,10 +396,12 @@
               <input type="text" name="subject" placeholder="Your subject" class="form__input">
               <input type="text" name="comname" placeholder="Company name" class="form__input form__input_m">
               <textarea name="message" rows="8" cols="80" placeholder="Write your message" class="form__message"></textarea>
-              <button type="button" name="button" class="contact__btn">Send message</button>
-              <div class="contact__info">
-                <span class="contact__star">*</span>We’ll contact you as as possible.
-                We don’t reply on Monday.
+              <div class="form__down">
+                <button type="button" name="button" class="contact__btn">Send message</button>
+                <div class="contact__info">
+                  <span class="contact__star">*</span>We’ll contact you as as possible.
+                  We don’t reply on Monday.
+                </div>
               </div>
             </form>
           </div>
