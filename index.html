@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Startup</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -16,14 +17,14 @@
           </div>
           <nav class="nav">
             <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">Services</a>
-            <a href="#" class="nav__link">About</a>
-            <a href="#" class="nav__link">Works</a>
-            <a href="#" class="nav__link">Blog</a>
-            <a href="#" class="nav__link">Clients</a>
-            <a href="#" class="nav__link">Contact</a>
+            <a href="#" class="nav__link servicesScroll">Services</a>
+            <a href="#" class="nav__link aboutScroll">About</a>
+            <a href="#" class="nav__link worksScroll">Works</a>
+            <a href="#" class="nav__link blogScroll">Blog</a>
+            <a href="#" class="nav__link clientsScroll">Clients</a>
+            <a href="#" class="nav__link contactScroll">Contact</a>
           </nav>
-          <button type="button" name="button" class="menu">
+          <button type="button" name="button" class="menu" id="menu" onclick="openMenu()">
             <div class="burger"></div>
             <div class="burger"></div>
             <div class="burger"></div>
@@ -32,13 +33,28 @@
       </div>
     </header>
 
+    <div class="clear" id="menuWindow">
+      <button type="button" name="button" class="menuWindow__btn" id="menu" onclick="closeMenu()">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+      </button>
+      <a href="#" class="menuWindow__link">Home</a>
+      <a href="#" class="menuWindow__link">Services</a>
+      <a href="#" class="menuWindow__link">About</a>
+      <a href="#" class="menuWindow__link">Works</a>
+      <a href="#" class="menuWindow__link">Blog</a>
+      <a href="#" class="menuWindow__link">Clients</a>
+      <a href="#" class="menuWindow__link">Contact</a>
+    </div>
+
   <!-- Intro -->
     <div class="intro">
       <div class="container">
         <div class="intro__inner">
           <h1 class="intro__title">Welcome to STARTUP</h1>
           <p class="intro__text">Your Favourite Creative Agency Template</p>
-          <a href="#" class="btn">Get started</a>
+          <a href="#" class="btn contactScroll">Get started</a>
         </div>
       </div>
     </div>
@@ -239,7 +255,7 @@
             Do you like OUR WORK so far?
             Let's talk about YOUR PROJECT!
           </div>
-          <a href="#" class="btn">Get in touch</a>
+          <a href="#" class="btn contactScroll">Get in touch</a>
         </div>
       </div>
 
@@ -339,7 +355,7 @@
           </div>
           <div class="clients__container">
             <div class="container">
-              <p class="clients__text">Hvaing placeat facere possimus, omnis
+              <p class="clients__text">”Hvaing placeat facere possimus, omnis
                 voluptas assumenda est, omnis dolor repellendus. Temporibus autem
                 quibusdam et aut officiis debitis aut rerum”</p>
               <p class="clients__person">John Doe, Google Inc.</p>
@@ -390,18 +406,16 @@
                 </div>
               </div>
             </div>
-            <form method="get" name="contact-form" class="form">
-              <input type="text" name="name" placeholder="Your name" class="form__input">
-              <input type="text" name="e-mail" placeholder="Your e-mail" class="form__input form__input_m">
-              <input type="text" name="subject" placeholder="Your subject" class="form__input">
-              <input type="text" name="comname" placeholder="Company name" class="form__input form__input_m">
-              <textarea name="message" rows="8" cols="80" placeholder="Write your message" class="form__message"></textarea>
-              <div class="form__down">
-                <button type="button" name="button" class="contact__btn">Send message</button>
-                <div class="contact__info">
-                  <span class="contact__star">*</span>We’ll contact you as as possible.
-                  We don’t reply on Monday.
-                </div>
+            <form method="post" name="contact-form" class="form" id="form" onsubmit="return checkForm(this)">
+              <input type="text" name="name" placeholder="Your name" class="form__input" id="name">
+              <input type="text" name="email" placeholder="Your e-mail" class="form__input form__input_m" id="email">
+              <input type="text" name="subject" placeholder="Your subject" class="form__input" id="subject">
+              <input type="text" name="comname" placeholder="Company name" class="form__input form__input_m" id="comname">
+              <textarea name="message" rows="8" cols="80" placeholder="Write your message" class="form__message" id="message"></textarea>
+              <input type="submit" name="submit" value="Send message" class="contact__btn"></input>
+              <div class="contact__info">
+                <span class="contact__star">*</span>We’ll contact you as as possible.
+                We don’t reply on Monday.
               </div>
             </form>
           </div>
@@ -412,15 +426,18 @@
       <footer class="footer">
         <div class="footer__inner">
           <div class="footer__icons">
-            <img src="img/footer/fa-twitter.png" class="footer__img">
-            <img src="img/footer/fa-twitter.png" class="footer__img">
-            <img src="img/footer/fa-twitter.png" class="footer__img">
-            <img src="img/footer/fa-twitter.png" class="footer__img">
+            <a href="#"><img src="img/footer/fa-twitter.png" class="footer__img"></a>
+            <a href="#"><img src="img/footer/fa-twitter.png" class="footer__img"></a>
+            <a href="#"><img src="img/footer/fa-twitter.png" class="footer__img"></a>
+            <a href="#"><img src="img/footer/fa-twitter.png" class="footer__img"></a>
           </div>
           <div class="footer__text">
             © 2015 Startup, Designed by ShapedTheme
           </div>
         </div>
       </footer>
+
+
+      <script src="js/main.js"></script>
   </body>
 </html>

@@ -110,7 +110,7 @@ body {
 	text-decoration: underline;
 }
 
-.menu {
+.menu, .menuWindow__btn {
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -124,36 +124,51 @@ body {
 	background-color: #fff;
 }
 
-.modalMenu {
-	display: flex;
-	flex-direction: column;
-	z-index: 150;
+.menuWindow {
+	width: 185px;
+	height: 500px;
+	background-color: rgba(0, 0, 0, .9);
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: #fff;
-	margin-top: 50px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* padding-left: 50px; */
+	z-index: 1000;
 }
 
-.modalMenu__link {
-	text-decoration: none;
-  color: #555;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-	padding: 0 10px;
+.menuWindow__btn {
+	position: absolute;
+	top: 36px;
+	right: 20px;
 }
 
-.modalMenu__link:hover {
+.menuWindow__link {
+	margin-bottom: 10px;
+	color: #fff;
+	transition: color .2s linear;
+}
+
+.menuWindow__link:last-child {
+	margin-bottom: 0;
+}
+
+.menuWindow__link:hover {
 	color: #c0301c;
+	transition: color .2s linear;
+}
+
+.clear {
+	display: none;
 }
 
 /* Intro
 =================*/
 .intro {
   width: 100%;
-  height: 770px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -581,6 +596,7 @@ body {
 .clients__logos {
   display: flex;
   justify-content: space-around;
+	align-items: center;
 }
 
 .clients__text {
@@ -606,7 +622,7 @@ body {
 .contact {
   width: 100%;
   min-height: 660px;
-  margin: 100px 0;
+  padding: 100px 0;
 }
 
 .contact__content {
@@ -673,21 +689,32 @@ body {
   width: 48%;
   height: 45px;
   margin-bottom: 20px;
-	padding-left: 15px;
+	padding: 10px 0 10px 15px;
 }
 
-.form__input[placeholder], .form__message[placeholder] {
+.form__input, .form__message {
 	font-family: 'Roboto Slab', serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.67;
-  text-transform: uppercase;
+}
+
+.form__input::placeholder, .form__message::placeholder {
+	font-family: 'Roboto Slab', serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.67;
+	text-transform: uppercase;
+}
+
+.redPlaceholder::placeholder {
+	color: red;
 }
 
 .form__message {
 	height: 104px;
   width: 100%;
-	padding-top: 16px;
+	padding-top: 15px;
 	padding-left: 15px;
 	margin-bottom: 20px;
 }
@@ -698,12 +725,6 @@ body {
 
 .form__input:focus::-moz-placeholder, .form__message:focus::-moz-placeholder {
 	opacity: 0;
-}
-
-.form__down {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 }
 
 .contact__btn {
@@ -718,14 +739,24 @@ body {
   padding: 16px 35px;
   background: none;
   cursor: pointer;
+	transition: all .2s linear;
+}
+
+.contact__btn:hover {
+	color: #fff;
+	background-color: #c0301c;
+	border: 1px solid #c0301c;
+	transition: all .2s linear;
 }
 
 .contact__info {
+	width: 75%;
 	font-family: 'Roboto Slab', serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.67;
-	margin-left: 10px;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .contact__star {
@@ -776,8 +807,12 @@ body {
 		display: none;
 	}
 
-	.menu {
+	.menu, .menuWindow__btn {
 		display: block;
+	}
+
+	.menuWindow {
+		display: flex;
 	}
 
 /* Intro */
@@ -849,6 +884,11 @@ body {
 
 	.services__icon {
 		width: 60px;
+	}
+
+	.text {
+		width: 70%;
+		margin: 0 auto;
 	}
 
 /* About */
